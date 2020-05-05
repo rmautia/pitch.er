@@ -76,7 +76,7 @@ def new_pitch():
         
 
         # Updated pitch instance
-        new_pitch = Pitch(pitch_title=title,pitch_content=pitch,user=current_user,upvotes=0,downvotes=0)
+        new_pitch = Pitch(pitch_title=title,pitch_content=pitch,category=category,user=current_user,upvotes=0,downvotes=0)
 
         # Save pitch method
         new_pitch.save_pitch()
@@ -149,3 +149,10 @@ def user_pitches(uname):
 
     return render_template("profile/pitches.html", user=user,pitches=pitches,pitches_count=pitches_count,date = user_joined)
 
+@main.route('/pitch/<int:id>')
+def single_pitch(id):
+    pitch=Pitch.query.get(id)
+    if pitch is None:
+        abort(404)
+    format_pitch = markdown2.markdown(pitch.new_pitch,extras=["code-friendly", "fenced-code-blocks"])
+    return render_template('pitch.html',pitch = pitch,format_pitch=format_pitch)
