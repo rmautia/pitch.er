@@ -155,4 +155,4 @@ def single_pitch(id):
     if pitch is None:
         abort(404)
     format_pitch = markdown2.markdown(pitch.new_pitch,extras=["code-friendly", "fenced-code-blocks"])
-    return render_template('pitch.html',pitch = pitch,format_pitch=format_pitch)
+    return render_template('newpitch.html',pitch = pitch,format_pitch=format_pitch)
