@@ -1,0 +1,12 @@
+.jumbotron {
+    background-color: aqua;
+    color: #fff;
+    padding: 100px 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+.navbar {
+    margin-bottom: 0;
+    font-family: 'Great Vibes', cursive;
+    font-size: 40px;
+}

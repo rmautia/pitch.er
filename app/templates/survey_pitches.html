@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+
+{%block content%}
+<link href="https://fonts.googleapis.com/css?family=Great+Vibes|Ranga" rel="stylesheet">
+<div class="jumbotron text-center" style="background-color: aqua; color: #fff; padding: 100px 25px; font-family: 'Indie Flower', cursive;">
+    <h1>Market Survey Pitches</h1>
+</div>
+<div class="container" style="font-family: 'Great+Vibes', cursive;">
+    <hr>
+    <div class="row">
+        {{macro.displayPitches(pitches)}}
+    </div>
+</div>
+{%endblock%}
