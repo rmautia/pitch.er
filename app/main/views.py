@@ -72,7 +72,7 @@ def new_pitch():
     pitch_form = PitchForm()
     if pitch_form.validate_on_submit():
         title = pitch_form.title.data
-        pitch = pitch_form.text.data
+        pitch = pitch_form.pitch.data
         category = pitch_form.category.data
 
         # Updated pitch instance
@@ -148,3 +148,11 @@ def user_pitches(uname):
     user_joined = user.date_joined.strftime('%b %d, %Y')
 
     return render_template("profile/pitches.html", user=user,pitches=pitches,pitches_count=pitches_count,date = user_joined)
+
+@main.route('/pitch/<int:id>')
+def single_pitch(id):
+    pitch=Pitch.query.get(id)
+    if comment is None:
+        abort(404)
+    format_comment = markdown2.markdown(pitch.pitch_content,extras=["code-friendly", "fenced-code-blocks"])
+    return render_template('pitch_content.html',pitch = pitch,format_comment=format_comment)
