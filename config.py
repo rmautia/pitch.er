@@ -45,7 +45,7 @@ class DevConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://raphael:Thejourney1.@localhost/pitcher'
 
     DEBUG = True
-    ENV = 'development'
+
     
 config_options = {
 'development':DevConfig,
