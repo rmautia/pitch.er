@@ -149,10 +149,3 @@ def user_pitches(uname):
 
     return render_template("profile/pitches.html", user=user,pitches=pitches,pitches_count=pitches_count,date = user_joined)
 
-@main.route('/pitch/<int:id>')
-def single_pitch(id):
-    pitch=Pitch.query.get(id)
-    if pitch is None:
-        abort(404)
-    format_pitch = markdown2.markdown(pitch.new_pitch,extras=["code-friendly", "fenced-code-blocks"])
-    return render_template('newpitch.html',pitch = pitch,format_pitch=format_pitch)
