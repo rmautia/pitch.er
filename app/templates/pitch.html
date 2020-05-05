@@ -9,7 +9,7 @@
 {%endblock%}
 <!-- Content block -->
 {%block content%}
-<div class="container" style="font-family: 'GreatVibes', cursive;">
+<div class="container-fluid" style="font-family: 'GreatVibes', cursive; background-color: chartreuse;" >
     <div class="row">
         <h3>{{pitch.pitch_title}}</h3>
         <hr>
@@ -34,4 +34,16 @@
     
 
 </div>
+<div class="container-fluid">
+
+    <div class="row">
+      <div class="col-sm-4">
+        <img src="{{pitch.image_path}}" class="img-responsive">
+      </div>
+  
+      <div class="col-sm-8">
+        {{format_comment|safe}}
+      </div>
+    </div>
+  </div>
 {%endblock%}
