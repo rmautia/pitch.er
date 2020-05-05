@@ -72,7 +72,7 @@ def new_pitch():
     pitch_form = PitchForm()
     if pitch_form.validate_on_submit():
         title = pitch_form.title.data
-        pitch = pitch_form.pitch.data
+        text = pitch_form.pitch.data
         category = pitch_form.category.data
 
         # Updated pitch instance
