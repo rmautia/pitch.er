@@ -37,6 +37,7 @@ class TestConfig(Config):
         Config: The parent configuration class with General configuration settings
     '''
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://raphael:Thejourney1.@localhost/pitcher'
+    DEBUG = True
 
 class DevConfig(Config):
     '''
