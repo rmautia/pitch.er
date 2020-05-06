@@ -9,7 +9,7 @@
 {%endblock%}
 <!-- Content block -->
 {%block content%}
-<div class="container-fluid" style="font-family: 'Great Vibes', cursive; background-color: chartreuse;" >
+<div class="container-fluid" style="background: url(https://www.liberaldictionary.com/wp-content/uploads/2019/01/background-9060.jpg); background-size: cover;" >
     <div class="row">
         <h3>{{pitch.pitch_title}}</h3>
         <hr>
@@ -18,9 +18,10 @@
         <p>Posted on {{date}} by {{pitch.user.username}}</p>
         <a href="/pitch/{{pitch.id}}?upvote=1">
             <i class="far fa-thumbs-up"></i>
-        </a>{{pitch.upvotes}} <a href="/pitch/{{pitch.id}}?downvote=1">
+        </a>{{pitch.upvotes}}
+        <a href="/pitch/{{pitch.id}}?downvote=1">
             <i class="far fa-thumbs-down"></i>
-        </a>{{pitch.downvote}}</span>
+        </a>{{pitch.downvotes}}</span>
 
     </div>
     <div class="row">

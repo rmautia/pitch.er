@@ -6,7 +6,7 @@ class Config:
     '''
     SECRET_KEY = os.environ.get("SECRET_KEY")
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://raphael:Thejourney1.@localhost/pitcher'
-    UPLOADED_PHOTOS_DEST ='app/static'
+    UPLOADED_PHOTOS_DEST ='app/static/photos'
     SQLALCHEMY_TRACK_MODIFICATIONS = True
 
     #configure e-mail
@@ -17,8 +17,8 @@ class Config:
     MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
 
     # simple mde  configurations
-    SIMPLEMDE_JS_IIFE = True
-    SIMPLEMDE_USE_CDN = True
+    # SIMPLEMDE_JS_IIFE = True
+    # SIMPLEMDE_USE_CDN = True
 
 class ProdConfig(Config):
     '''
@@ -37,8 +37,7 @@ class TestConfig(Config):
         Config: The parent configuration class with General configuration settings
     '''
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://raphael:Thejourney1.@localhost/pitcher'
-    DEBUG = True
-
+    
 class DevConfig(Config):
     '''
     Development  configuration child class
@@ -49,6 +48,7 @@ class DevConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://raphael:Thejourney1.@localhost/pitcher'
 
     DEBUG = True
+    ENV = 'development'
 
     
 config_options = {

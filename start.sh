@@ -1,4 +1,4 @@
-export SECRET_KEY='ranaya'
+export SECRET_KEY='nyangenya'
 export MAIL_USERNAME='raphaelnyangenya@gmail.com'
 export MAIL_PASSWORD='Raphaelite2019.'
 
