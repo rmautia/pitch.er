@@ -1,5 +1,5 @@
 # One Minute Pitch App
-In life, you only have 60 seconds to impress someone. 1 minute can make or break you. How do we make sure that you use your 1 minute to actually say something meaningful? With this app, you can spend your one minute wisely and make the best impression out of it. Available online at https://pitchar.herokuapp.com/
+In life, you only have 60 seconds to impress someone. 1 minute can make or break you. How do we make sure that you use your 1 minute to actually say something meaningful? With this app, you can spend your one minute wisely and make the best impression out of it. Available online at https://pitchra.herokuapp.com/
 
 # User stories :
     * As a user, you will be able to see the pitches other people have posted.
