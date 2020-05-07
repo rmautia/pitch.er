@@ -74,9 +74,10 @@ def new_pitch():
         title = pitch_form.title.data
         text = pitch_form.text.data
         category = pitch_form.category.data
+    
 
         # Updated pitch instance
-        new_pitch = Pitch(pitch_title=title,pitch_content=pitch,category=category,user=current_user,upvotes=0,downvotes=0)
+        new_pitch = Pitch(pitch_title=title,pitch_content=text,category=category,user=current_user,upvotes=0,downvotes=0)
 
         # Save pitch method
         new_pitch.save_pitch()
@@ -112,7 +113,7 @@ def pitch(id):
     posted_date = pitch.posted.strftime('%b %d, %Y')
 
     if request.args.get("upvote"):
-        pitch.likes = pitch.upvotes + 1
+        pitch.upvotes = pitch.upvotes + 1
 
         db.session.add(pitch)
         db.session.commit()
